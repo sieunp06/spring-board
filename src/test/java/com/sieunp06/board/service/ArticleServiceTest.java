@@ -73,7 +73,7 @@ class ArticleServiceTest {
         given(articleRepository.save(any(Article.class))).willReturn(null);
 
         // When
-        sut.updateArticle(1L, ArticleUpdateDto.of("title", "content", "#hashtag"););
+        sut.updateArticle(1L, ArticleUpdateDto.of("title", "content", "#hashtag"));
 
         // Then
         then(articleRepository).should().save(any(Article.class));
@@ -83,7 +83,7 @@ class ArticleServiceTest {
     @Test
     void givenArticleId_whenDeletingArticle_thenDeletesArticle() {
         // Given
-        willDoNothing().given(articleRepository).delete(any(Article.class))
+        willDoNothing().given(articleRepository).delete(any(Article.class));
 
         // When
         sut.deleteArticle(1L);
