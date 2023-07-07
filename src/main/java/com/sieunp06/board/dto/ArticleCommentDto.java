@@ -10,8 +10,8 @@ public record ArticleCommentDto (
         Long articleId,
         UserAccountDto userAccountDto,
         String content,
-        LocalDateTime createAt,
-        String createBy,
+        LocalDateTime createdAt,
+        String createdBy,
         LocalDateTime modifiedAt,
         String modifiedBy
 ) {
