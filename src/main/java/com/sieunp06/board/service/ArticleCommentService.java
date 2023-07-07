@@ -39,7 +39,7 @@ public class ArticleCommentService {
 
     public void updateArticleComment(ArticleCommentDto dto) {
         try {
-            ArticleComment articleComment = articleCommentRepository.getReferenceById(dto.id);
+            ArticleComment articleComment = articleCommentRepository.getReferenceById(dto.id());
             if (dto.content() != null) {
                 articleComment.setContent(dto.content());
             }
